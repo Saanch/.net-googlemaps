@@ -1,10 +1,9 @@
 ﻿using System.Collections.Specialized;
 using System.Threading.Tasks;
 using GoogleMaps.Net.Places.Contracts;
-using GoogleMaps.Net.Places.Models;
+using GoogleMaps.Net.Places.Response;
 using GoogleMaps.Net.Shared;
 using GoogleMaps.Net.Shared.Contracts;
-using GoogleMaps.Net.Shared.Models;
 
 namespace GoogleMaps.Net.Places.Services
 {
@@ -21,10 +20,10 @@ namespace GoogleMaps.Net.Places.Services
         {
         }
 
-        public async Task<ApiResult<PlaceResult>> Details(string placeId)
+        public async Task<PlaceDetailsResponse> Details(string placeId)
         {
             var queryParams = new NameValueCollection {{"placeid", placeId}};
-            return await _webApi.GetAsync<ApiResult<PlaceResult>>(EndPointUris.PlaceSearchDetails, queryParams);
+            return await _webApi.GetAsync<PlaceDetailsResponse>(EndPointUris.PlaceSearchDetails, queryParams);
         }
 
         /// <summary>

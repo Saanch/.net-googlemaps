@@ -41,19 +41,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DirectionsService.cs" />
-    <Compile Include="Models\Bound.cs" />
-    <Compile Include="Models\DirectionRequest.cs" />
-    <Compile Include="Models\DirectionResponse.cs" />
-    <Compile Include="Models\Duration.cs" />
-    <Compile Include="Models\LatLng.cs" />
-    <Compile Include="Models\Leg.cs" />
-    <Compile Include="Models\Location.cs" />
-    <Compile Include="Models\Polyline.cs" />
-    <Compile Include="Models\ResultStatus.cs" />
-    <Compile Include="Models\Route.cs" />
-    <Compile Include="Models\Step.cs" />
-    <Compile Include="Models\TravelMode.cs" />
-    <Compile Include="Models\Waypoint.cs" />
+    <Compile Include="Response\Bound.cs" />
+    <Compile Include="Request\DirectionRequest.cs" />
+    <Compile Include="Response\DirectionResponse.cs" />
+    <Compile Include="Response\Duration.cs" />
+    <Compile Include="Response\LatLng.cs" />
+    <Compile Include="Response\Leg.cs" />
+    <Compile Include="Response\Location.cs" />
+    <Compile Include="Response\Polyline.cs" />
+    <Compile Include="Response\ResultStatus.cs" />
+    <Compile Include="Response\Route.cs" />
+    <Compile Include="Response\Step.cs" />
+    <Compile Include="Response\TravelMode.cs" />
+    <Compile Include="Response\Waypoint.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

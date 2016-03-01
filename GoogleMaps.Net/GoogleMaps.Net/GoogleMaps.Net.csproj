@@ -48,7 +48,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="GoogleMapsApiClient.cs" />
     <Compile Include="IGoogleMapsApiClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

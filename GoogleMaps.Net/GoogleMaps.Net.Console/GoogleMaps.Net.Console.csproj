@@ -59,9 +59,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Service References\" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\GoogleMaps.Net.Places\GoogleMaps.Net.Places.csproj">
       <Project>{f4ad4639-b780-4d53-8e07-5eaf0ad517bf}</Project>
       <Name>GoogleMaps.Net.Places</Name>

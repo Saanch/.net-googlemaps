@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Threading.Tasks;
-using GoogleMaps.Net.Places.Models;
-using GoogleMaps.Net.Shared.Models;
+using GoogleMaps.Net.Places.Response;
 
 namespace GoogleMaps.Net.Places.Contracts
 {
     public interface IPlaceSerach : IDisposable
     {
-        Task<ApiResult<PlaceResult>> Details(string placeId);
+        Task<PlaceDetailsResponse> Details(string placeId);
     }
 }

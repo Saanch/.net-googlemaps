@@ -1,18 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
-using GoogleMaps.Net.Places.Services;
-using GoogleMaps.Net.Shared;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 
 namespace GoogleMaps.Net.Console
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             //var url = new Uri("https://maps.googleapis.com/maps/");
 
@@ -33,7 +25,7 @@ namespace GoogleMaps.Net.Console
                 var json = JsonConvert.SerializeObject(details, Formatting.Indented);
                 System.Console.WriteLine(json);
             }
-            
+
             System.Console.ReadKey();
         }
     }

@@ -45,18 +45,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
-    <Compile Include="Models\GeocoderAddressComponent.cs" />
-    <Compile Include="Models\LatLngBounds.cs" />
-    <Compile Include="Models\PlaceAspectRating.cs" />
-    <Compile Include="Models\PlaceGeometry.cs" />
-    <Compile Include="Models\PlacePhoto.cs" />
-    <Compile Include="Models\PlaceResult.cs" />
-    <Compile Include="Models\PlaceReview.cs" />
-    <Compile Include="Models\PlacesServiceStatus.cs" />
-    <Compile Include="Models\PriceLevel.cs" />
+    <Compile Include="Response\GeocoderAddressComponent.cs" />
+    <Compile Include="Response\LatLngBounds.cs" />
+    <Compile Include="Response\PlaceAspectRating.cs" />
+    <Compile Include="Response\PlaceDetailsResponse.cs" />
+    <Compile Include="Response\PlaceGeometry.cs" />
+    <Compile Include="Response\PlacePhoto.cs" />
+    <Compile Include="Response\PlaceResult.cs" />
+    <Compile Include="Response\PlaceReview.cs" />
+    <Compile Include="Response\PlacesServiceStatus.cs" />
+    <Compile Include="Response\PriceLevel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Contracts\IPlaceSerach.cs" />
-    <Compile Include="Models\LatLng.cs" />
+    <Compile Include="Response\LatLng.cs" />
     <Compile Include="Services\PlaceSearch.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -68,6 +69,9 @@
       <Project>{2e48fdfc-af17-4937-bf89-dac71ae7cf4a}</Project>
       <Name>GoogleMaps.Net.Shared</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Request\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
