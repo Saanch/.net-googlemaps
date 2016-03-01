@@ -4,6 +4,7 @@ using GoogleMaps.Net.Places.Contracts;
 using GoogleMaps.Net.Places.Response;
 using GoogleMaps.Net.Shared;
 using GoogleMaps.Net.Shared.Contracts;
+using GoogleMaps.Net.Shared.Data;
 
 namespace GoogleMaps.Net.Places.Services
 {
@@ -20,9 +21,22 @@ namespace GoogleMaps.Net.Places.Services
         {
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="placeId">The Place ID of the Place for which details are being requested.</param>
+        /// <returns></returns>
         public async Task<PlaceDetailsResponse> Details(string placeId)
         {
             var queryParams = new NameValueCollection {{"placeid", placeId}};
+            return await _webApi.GetAsync<PlaceDetailsResponse>(EndPointUris.PlaceSearchDetails, queryParams);
+        }
+
+
+        //https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522,151.1957362&radius=500&type=restaurant&name=cruise&key
+        public async Task<PlaceDetailsResponse> NearbySearch(LatLng location, int radius)
+        {
+            var queryParams = new NameValueCollection {{"location", location.Lat + "," + location.Lng}, {"radius", radius.ToString()} };
             return await _webApi.GetAsync<PlaceDetailsResponse>(EndPointUris.PlaceSearchDetails, queryParams);
         }
 

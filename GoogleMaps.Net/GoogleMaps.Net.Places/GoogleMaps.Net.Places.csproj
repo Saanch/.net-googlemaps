@@ -45,6 +45,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Request\NearbySearchRequest.cs" />
+    <Compile Include="Request\PlacesRankBy.cs" />
+    <Compile Include="Request\RadarSearchRequest.cs" />
     <Compile Include="Response\GeocoderAddressComponent.cs" />
     <Compile Include="Response\LatLngBounds.cs" />
     <Compile Include="Response\PlaceAspectRating.cs" />
@@ -57,7 +60,6 @@
     <Compile Include="Response\PriceLevel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Contracts\IPlaceSerach.cs" />
-    <Compile Include="Response\LatLng.cs" />
     <Compile Include="Services\PlaceSearch.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -70,9 +72,7 @@
       <Name>GoogleMaps.Net.Shared</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Request\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

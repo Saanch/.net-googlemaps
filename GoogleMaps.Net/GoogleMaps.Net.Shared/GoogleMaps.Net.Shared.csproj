@@ -51,6 +51,8 @@
   <ItemGroup>
     <Compile Include="Contracts\IHttpClient.cs" />
     <Compile Include="Contracts\IWebApi.cs" />
+    <Compile Include="Data\Geometry.cs" />
+    <Compile Include="Data\LatLng.cs" />
     <Compile Include="DisposableObject.cs" />
     <Compile Include="EndPointUris.cs" />
     <Compile Include="HttpClientAdapter.cs" />
