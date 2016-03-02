@@ -68,10 +68,14 @@ namespace GoogleMaps.Net.Console
                 //System.Console.WriteLine(json);
                 //System.Console.WriteLine("Total: " + radarsearch.Predictions.Count());
 
-                var radarsearch = client.GeocodingService.Geocode("sydney").Result;
-                var json = JsonConvert.SerializeObject(radarsearch, Formatting.Indented);
+                //var radarsearch = client.GeocodingService.Geocode("sydney").Result;
+                //var json = JsonConvert.SerializeObject(radarsearch, Formatting.Indented);
+                //System.Console.WriteLine(json);
+
+                var directions = client.DirectionsService.GetDirection("sydney", "north ryde").Result;
+                var json = JsonConvert.SerializeObject(directions, Formatting.Indented);
                 System.Console.WriteLine(json);
-                
+
             }
 
             System.Console.ReadKey();

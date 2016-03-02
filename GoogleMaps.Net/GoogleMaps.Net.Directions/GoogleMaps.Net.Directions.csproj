@@ -44,7 +44,7 @@
     <Compile Include="DirectionsService.cs" />
     <Compile Include="Request\DirectionRequest.cs" />
     <Compile Include="Response\DirectionResponse.cs" />
-    <Compile Include="Response\Duration.cs" />
+    <Compile Include="Response\TextValue.cs" />
     <Compile Include="Response\Leg.cs" />
     <Compile Include="Response\Location.cs" />
     <Compile Include="Response\Polyline.cs" />

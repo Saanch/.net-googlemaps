@@ -59,6 +59,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\GoogleMaps.Net.Directions\GoogleMaps.Net.Directions.csproj">
+      <Project>{0896351b-77d4-43f3-824b-3dc9d0a48044}</Project>
+      <Name>GoogleMaps.Net.Directions</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GoogleMaps.Net.Geocoding\GoogleMaps.Net.Geocoding.csproj">
       <Project>{71704267-5667-4ce1-bae5-8ba8d8cdf593}</Project>
       <Name>GoogleMaps.Net.Geocoding</Name>
