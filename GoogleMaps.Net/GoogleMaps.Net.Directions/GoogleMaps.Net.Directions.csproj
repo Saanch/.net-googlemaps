@@ -40,21 +40,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IDirectionsService.cs" />
     <Compile Include="DirectionsService.cs" />
-    <Compile Include="Response\Bound.cs" />
     <Compile Include="Request\DirectionRequest.cs" />
     <Compile Include="Response\DirectionResponse.cs" />
     <Compile Include="Response\Duration.cs" />
-    <Compile Include="Response\LatLng.cs" />
     <Compile Include="Response\Leg.cs" />
     <Compile Include="Response\Location.cs" />
     <Compile Include="Response\Polyline.cs" />
-    <Compile Include="Response\ResultStatus.cs" />
+    <Compile Include="Response\GeocoderStatus.cs" />
     <Compile Include="Response\Route.cs" />
     <Compile Include="Response\Step.cs" />
     <Compile Include="Response\TravelMode.cs" />
     <Compile Include="Response\Waypoint.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GoogleMaps.Net.Shared\GoogleMaps.Net.Shared.csproj">
+      <Project>{2e48fdfc-af17-4937-bf89-dac71ae7cf4a}</Project>
+      <Name>GoogleMaps.Net.Shared</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

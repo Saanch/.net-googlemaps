@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleMaps.Net.Console", "G
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{9882264C-2D78-452B-88F7-294BF2125C8A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleMaps.Net.Geocoding", "GoogleMaps.Net.Geocoding\GoogleMaps.Net.Geocoding.csproj", "{71704267-5667-4CE1-BAE5-8BA8D8CDF593}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,10 @@ Global
 		{78F18CCF-778F-419A-B43E-955AEDB9CB4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{78F18CCF-778F-419A-B43E-955AEDB9CB4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{78F18CCF-778F-419A-B43E-955AEDB9CB4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71704267-5667-4CE1-BAE5-8BA8D8CDF593}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71704267-5667-4CE1-BAE5-8BA8D8CDF593}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71704267-5667-4CE1-BAE5-8BA8D8CDF593}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71704267-5667-4CE1-BAE5-8BA8D8CDF593}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

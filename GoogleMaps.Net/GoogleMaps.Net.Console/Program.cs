@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using GoogleMaps.Net.Geocoding.Services;
 using GoogleMaps.Net.Places.Request;
 using GoogleMaps.Net.Shared.Data;
 using Newtonsoft.Json;
@@ -49,18 +50,28 @@ namespace GoogleMaps.Net.Console
                 //System.Console.WriteLine(json);
                 //System.Console.WriteLine("Total: "+radarsearch.Results.Count());
 
-                var request = new RadarSearchRequest
-                {
-                    Location = location,
-                    Type = "restaurant",
-                    Keyword = "vegetarian",
-                    OpenNow = true,
-                    Radius = 5000
-                };
-                var radarsearch = places.RadarSearch(request).Result;
+                //var request = new RadarSearchRequest
+                //{
+                //    Location = location,
+                //    Type = "restaurant",
+                //    Keyword = "vegetarian",
+                //    OpenNow = true,
+                //    Radius = 5000
+                //};
+                //var radarsearch = places.RadarSearch(request).Result;
+                //var json = JsonConvert.SerializeObject(radarsearch, Formatting.Indented);
+                //System.Console.WriteLine(json);
+                //System.Console.WriteLine("Total: " + radarsearch.Results.Count());
+
+                //var radarsearch = places.Autocomplete("sydney").Result;
+                //var json = JsonConvert.SerializeObject(radarsearch, Formatting.Indented);
+                //System.Console.WriteLine(json);
+                //System.Console.WriteLine("Total: " + radarsearch.Predictions.Count());
+
+                var radarsearch = client.GeocodingService.Geocode("sydney").Result;
                 var json = JsonConvert.SerializeObject(radarsearch, Formatting.Indented);
                 System.Console.WriteLine(json);
-                System.Console.WriteLine("Total: " + radarsearch.Results.Count());
+                
             }
 
             System.Console.ReadKey();

@@ -1,4 +1,6 @@
-﻿namespace GoogleMaps.Net.Directions.Response
+﻿using GoogleMaps.Net.Shared.Data;
+
+namespace GoogleMaps.Net.Directions.Response
 {
     public class Step
     {

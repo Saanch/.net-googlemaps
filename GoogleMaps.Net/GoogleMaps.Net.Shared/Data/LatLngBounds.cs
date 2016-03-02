@@ -35,6 +35,12 @@ namespace GoogleMaps.Net.Shared.Data
             West = west;
         }
 
+
+        public string ToUrlString()
+        {
+            return $"{North},{East}|{South},{West}";
+        }
+
         /// <summary>
         /// Indicates whether the current object is equal to another object of the same type.
         /// </summary>

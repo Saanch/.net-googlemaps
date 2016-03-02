@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Net.Http;
+using GoogleMaps.Net.Directions;
+using GoogleMaps.Net.Geocoding.Services;
+using GoogleMaps.Net.Geocoding.Services.Contracts;
 using GoogleMaps.Net.Places.Contracts;
 using GoogleMaps.Net.Places.Services;
 using GoogleMaps.Net.Shared;
@@ -20,6 +23,8 @@ namespace GoogleMaps.Net
                 });
             var webApi = new WebApi(httpClient, apiKey);
             PlaceSearch = new PlaceSearch(webApi);
+            GeocodingService = new GeocodingService(webApi);
+            DirectionsService = new DirectionsService(webApi);
         }
 
         /// <summary>
@@ -37,5 +42,7 @@ namespace GoogleMaps.Net
         }
 
         public IPlaceSerach PlaceSearch { get; }
+        public IGeocodingService GeocodingService { get; }
+        public IDirectionsService DirectionsService { get; }
     }
 }

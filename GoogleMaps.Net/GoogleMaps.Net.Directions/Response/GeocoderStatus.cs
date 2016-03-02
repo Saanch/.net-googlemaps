@@ -1,6 +1,6 @@
 ﻿namespace GoogleMaps.Net.Directions.Response
 {
-    public enum ResultStatus
+    public enum GeocoderStatus
     {
         OK = 1,
     }

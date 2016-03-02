@@ -124,6 +124,13 @@ namespace GoogleMaps.Net.Places.Services
             return await _webApi.GetAsync<RadarSearchResponse>(EndPointUris.PlacesRadarSearch, queryParams);
         }
 
+        public async Task<AutocompleteResponse> Autocomplete(string input)
+        {
+            var queryParams = new NameValueCollection { { "input", input } };
+            return await _webApi.GetAsync<AutocompleteResponse>(EndPointUris.PlacesAutocompleteSearch, queryParams);
+        } 
+
+
         /// <summary>
         /// Dispose of resources being used by the disposable object.
         /// </summary>

@@ -3,7 +3,7 @@
     /// <summary>
     /// The status returned by the PlacesService on the completion of its searches.
     /// </summary>
-    public enum PlacesServiceStatus
+    public enum ServiceStatus
     {
         /// <summary>
         /// Error.

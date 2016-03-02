@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace GoogleMaps.Net.Places.Response
+namespace GoogleMaps.Net.Shared.Data
 {
     public class GeocoderAddressComponent
     {

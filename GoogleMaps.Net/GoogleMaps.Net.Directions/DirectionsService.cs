@@ -1,7 +1,14 @@
-﻿namespace GoogleMaps.Net.Directions
+﻿using GoogleMaps.Net.Shared.Contracts;
+
+namespace GoogleMaps.Net.Directions
 {
-    public class DirectionsService
+    public class DirectionsService : IDirectionsService
     {
-         
+        private readonly IWebApi _webApi;
+
+        public DirectionsService(IWebApi webApi)
+        {
+            _webApi = webApi;
+        }
     }
 }

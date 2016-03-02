@@ -6,6 +6,6 @@ namespace GoogleMaps.Net.Places.Response
     {
         public IEnumerable<string> HtmlAttributions { get; set; }
         public IEnumerable<T> Results { get; set; }
-        public PlacesServiceStatus Status { get; set; }
+        public ServiceStatus Status { get; set; }
     }
 }

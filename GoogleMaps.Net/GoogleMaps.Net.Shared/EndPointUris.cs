@@ -8,10 +8,9 @@ namespace GoogleMaps.Net.Shared
         public const string PlacesNerbySearch = "api/place/nearbysearch/json";
         public const string PlacesTextSearch = "api/place/textsearch/json";
         public const string PlacesRadarSearch = "api/place/radarsearch/json";
-        public static Uri Directions()
-        {
-            return new Uri(@"/maps/api/directions/json", UriKind.Relative);
-        }
+        public const string PlacesAutocompleteSearch = "api/place/autocomplete/json";
+        public const string Geocode = "api/geocode/json";
+        public const string Directions = "api/directions/json";
 
         public static Uri GetBaseUri()
         {

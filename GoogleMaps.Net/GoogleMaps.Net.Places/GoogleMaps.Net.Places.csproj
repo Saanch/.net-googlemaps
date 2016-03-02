@@ -49,7 +49,10 @@
     <Compile Include="Request\PlaceSearchRequest.cs" />
     <Compile Include="Request\PlacesRankBy.cs" />
     <Compile Include="Request\RadarSearchRequest.cs" />
-    <Compile Include="Response\GeocoderAddressComponent.cs" />
+    <Compile Include="Response\AutocompleteResponse.cs" />
+    <Compile Include="Response\AutoCompleteResult.cs" />
+    <Compile Include="Response\AutocompleteTerm.cs" />
+    <Compile Include="Response\MatchedSubstring.cs" />
     <Compile Include="Response\RadarSearchResponse.cs" />
     <Compile Include="Response\RadarSearchResult.cs" />
     <Compile Include="Response\TextSearchResult.cs" />
@@ -62,7 +65,7 @@
     <Compile Include="Response\PlacePhoto.cs" />
     <Compile Include="Response\PlaceResult.cs" />
     <Compile Include="Response\PlaceReview.cs" />
-    <Compile Include="Response\PlacesServiceStatus.cs" />
+    <Compile Include="Response\ServiceStatus.cs" />
     <Compile Include="Response\PriceLevel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Contracts\IPlaceSerach.cs" />

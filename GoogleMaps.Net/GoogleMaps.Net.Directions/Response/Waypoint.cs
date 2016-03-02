@@ -4,7 +4,7 @@ namespace GoogleMaps.Net.Directions.Response
 {
     public class Waypoint
     {
-        public ResultStatus GeocoderStatus { get; set; }
+        public GeocoderStatus GeocoderStatus { get; set; }
         public string PlaceId { get; set; }
         public IEnumerable<string> Types { get; set; }
     }

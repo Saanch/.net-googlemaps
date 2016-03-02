@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using GoogleMaps.Net.Shared.Data;
 
 namespace GoogleMaps.Net.Directions.Response
 {
@@ -10,6 +11,6 @@ namespace GoogleMaps.Net.Directions.Response
         public Polyline OverviewPolyline { get; set; }
         public IEnumerable<string> Warnings { get; set; }
         public IEnumerable<int> WaypointOrder { get; set; }
-        public Bound Bounds { get; set; }
+        public Viewport Bounds { get; set; }
     }
 }

@@ -18,5 +18,6 @@ namespace GoogleMaps.Net.Places.Contracts
         Task<RadarSearchResponse> RadarSearchByNames(LatLng location, int radius, IEnumerable<string> names);
         Task<RadarSearchResponse> RadarSearchByType(LatLng location, int radius, string type);
         Task<RadarSearchResponse> RadarSearch(RadarSearchRequest request);
+        Task<AutocompleteResponse> Autocomplete(string input);
     }
 }
