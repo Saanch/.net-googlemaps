@@ -3,9 +3,7 @@ using GoogleMaps.Net.Shared.Data;
 
 namespace GoogleMaps.Net.Places.Request
 {
-    public class NearbySearchRequest
+    public class NearbySearchRequest : SearchRequest
     {
-        public LatLng Location { get; set; }
-        public int Radius { get; set; } 
     }
 }

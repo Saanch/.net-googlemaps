@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Specialized;
+using System.Diagnostics;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -77,6 +78,8 @@ namespace GoogleMaps.Net.Shared
 
             if (relativeOperationUri.IsAbsoluteUri)
                 throw new ArgumentException("The supplied URI is not a relative URI.", nameof(relativeOperationUri));
+
+            Debug.WriteLine(_httpClient.BaseAddress + relativeOperationUri.OriginalString);
 
             using (HttpResponseMessage response = await _httpClient.GetAsync(relativeOperationUri))
             {

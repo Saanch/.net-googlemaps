@@ -1,10 +1,10 @@
 ﻿namespace GoogleMaps.Net.Places.Request
 {
-    public enum PlacesRankBy
+    public enum PlacesRankby
     {
-        //Ranks place results by distance from the location.
-        DISTANCE,
         //Ranks place results by their prominence.
-        PROMINENCE
+        PROMINENCE,
+        //Ranks place results by distance from the location.
+        DISTANCE
     }
 }

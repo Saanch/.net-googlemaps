@@ -1,4 +1,7 @@
-﻿using Newtonsoft.Json;
+﻿using System.Linq;
+using GoogleMaps.Net.Places.Request;
+using GoogleMaps.Net.Shared.Data;
+using Newtonsoft.Json;
 
 namespace GoogleMaps.Net.Console
 {
@@ -21,9 +24,43 @@ namespace GoogleMaps.Net.Console
             using (var client = new GoogleMapsApiClient("AIzaSyAkQzokNWcuyH4wa6nT5mclfsmdpMAjOZc"))
             {
                 var places = client.PlaceSearch;
-                var details = places.Details("ChIJN1t_tDeuEmsRUsoyG83frY4").Result;
-                var json = JsonConvert.SerializeObject(details, Formatting.Indented);
+                //var details = places.Details("ChIJN1t_tDeuEmsRUsoyG83frY4").Result;
+                var location = new LatLng(-33.8670522, 151.1957362);
+                //var request = new NearbySearchRequest
+                //{
+                //    Location = location,
+                //    Type = "restaurant",
+                //    OpenNow = true,
+                //    Radius = 5000
+                //};
+                //var details = places.NearbySearch(request).Result;
+                //var json = JsonConvert.SerializeObject(details, Formatting.Indented);
+                //System.Console.WriteLine(json);
+
+                //var search = places.TextSearch("restaurants in Sydney").Result;
+                //json = JsonConvert.SerializeObject(search, Formatting.Indented);
+                //System.Console.WriteLine(json);
+
+
+                //var names = new[] {"sydney"};
+                
+                //var radarsearch = places.RadarSearchByNames(location, 5000, names).Result;
+                //var json = JsonConvert.SerializeObject(radarsearch, Formatting.Indented);
+                //System.Console.WriteLine(json);
+                //System.Console.WriteLine("Total: "+radarsearch.Results.Count());
+
+                var request = new RadarSearchRequest
+                {
+                    Location = location,
+                    Type = "restaurant",
+                    Keyword = "vegetarian",
+                    OpenNow = true,
+                    Radius = 5000
+                };
+                var radarsearch = places.RadarSearch(request).Result;
+                var json = JsonConvert.SerializeObject(radarsearch, Formatting.Indented);
                 System.Console.WriteLine(json);
+                System.Console.WriteLine("Total: " + radarsearch.Results.Count());
             }
 
             System.Console.ReadKey();

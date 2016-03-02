@@ -2,6 +2,6 @@
 {
     public class Geometry
     {
-         
+        public LatLng Location { get; set; }
     }
 }

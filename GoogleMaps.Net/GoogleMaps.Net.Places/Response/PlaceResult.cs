@@ -7,12 +7,26 @@ namespace GoogleMaps.Net.Places.Response
     /// </summary>
     public class PlaceResult
     {
+        /// <summary>
+        /// The collection of address components for this Place's location.
+        /// </summary>
         public IEnumerable<GeocoderAddressComponent> AddressComponents { get; set; }
-
+        /// <summary>
+        /// The rated aspects of this Place, based on Google and Zagat user reviews. The ratings are on a scale of 0 to 30.
+        /// </summary>
         public IEnumerable<PlaceAspectRating> Aspects { get; set; }
         public string AdrAddress { get; set; }
+        /// <summary>
+        /// The Place's full address.
+        /// </summary>
         public string FormattedAddress { get; set; }
+        /// <summary>
+        /// The Place's phone number, formatted according to the number's regional convention.
+        /// </summary>
         public string FormattedPhoneNumber { get; set; }
+        /// <summary>
+        /// The Place's geometry-related information.
+        /// </summary>
         public PlaceGeometry Geometry { get; set; }
        
         /// <summary>
@@ -21,7 +35,9 @@ namespace GoogleMaps.Net.Places.Response
         public string Icon { get; set; }
 
         public string Id { get; set; }
-
+        /// <summary>
+        /// 
+        /// </summary>
         public string InternationalPhoneNumber { get; set; }
         public string Name { get; set; }
         public bool PermanentlyClosed { get; set; }

@@ -53,6 +53,11 @@
     <Compile Include="Contracts\IWebApi.cs" />
     <Compile Include="Data\Geometry.cs" />
     <Compile Include="Data\LatLng.cs" />
+    <Compile Include="Data\LatLngBounds.cs" />
+    <Compile Include="Data\OpenDuration.cs" />
+    <Compile Include="Data\OpeningHours.cs" />
+    <Compile Include="Data\Period.cs" />
+    <Compile Include="Data\Viewport.cs" />
     <Compile Include="DisposableObject.cs" />
     <Compile Include="EndPointUris.cs" />
     <Compile Include="HttpClientAdapter.cs" />
