@@ -8,8 +8,6 @@ properties {
 	$publishedNUnitTestsDirectory = "$temporaryOutputDirectory\_PublishedNUnitTests"
 	$publishedxUnitTestsDirectory = "$temporaryOutputDirectory\_PublishedxUnitTests"
 	$publishedMSTestTestsDirectory = "$temporaryOutputDirectory\_PublishedMSTestTests"
-	$publishedWebsitesDirectory = "$temporaryOutputDirectory\_PublishedWebsites"
-	$publishedApplicationsDirectory = "$temporaryOutputDirectory\_PublishedApplications"
 	$publishedLibrariesDirectory = "$temporaryOutputDirectory\_PublishedLibraries\"
 
 	$testResultsDirectory = "$outputDirectory\TestResults"
@@ -217,57 +215,10 @@ task Test `
 task Package `
 	-depends Compile, Test `
 	-description "Package applications" `
-	-requiredVariables publishedWebsitesDirectory, publishedApplicationsDirectory, applicationsOutputDirectory, publishedLibrariesDirectory, librariesOutputDirectory `
+	-requiredVariables applicationsOutputDirectory, publishedLibrariesDirectory, librariesOutputDirectory `
 {
-	# Merge published websites and published applications
-	$applications = @(Get-ChildItem $publishedWebsitesDirectory) + @(Get-ChildItem $publishedApplicationsDirectory)
-	
-	if ($applications.Length -gt 0 -and !(Test-Path $applicationsOutputDirectory))
-	{
-		New-Item $applicationsOutputDirectory -ItemType Directory | Out-Null
-	}
 
-	foreach($application in $applications)
-	{
-		$nuspecPath = $application.FullName + "\" + $application.Name + ".nuspec"
-
-		Write-Host "Looking for nuspec file at $nuspecPath"
-
-		if (Test-Path $nuspecPath)
-		{
-			Write-Host "Packaging $($application.Name) as a NuGet package"
-
-			# Load the nuspec file as XML
-			$nuspec = [xml](Get-Content -Path $nuspecPath)
-			$metadata = $nuspec.package.metadata
-
-			# Edit the metadata
-			$metadata.version = $metadata.version.Replace("[buildNumber]", $buildNumber)
-
-			if(! $isMainBranch)
-			{
-				$metadata.version = $metadata.version + "-$branchName"
-			}
-			
-			$metadata.releaseNotes = "Build Number: $buildNumber`r`nBranch Name: $branchName`r`nCommit Hash: $gitCommitHash"
-
-			# Save the nuspec file
-			$nuspec.Save((Get-Item $nuspecPath))
-
-			# package as NuGet package
-			exec { & $nugetExe pack $nuspecPath -OutputDirectory $applicationsOutputDirectory}
-		}
-		else
-		{
-			Write-Host "Packaging $($application.Name) as a zip file"
-
-			$inputDirectory = "$($application.FullName)\*"
-			$archivePath = "$($applicationsOutputDirectory)\$($application.Name).zip"
-
-			Exec { & $7ZipExe a -r -mx3 $archivePath $inputDirectory }
-		}
-
-		#Moving NuGet libraries to the packages directory
+			#Moving NuGet libraries to the packages directory
 		if (Test-Path $publishedLibrariesDirectory)
 		{
 			if (!(Test-Path $librariesOutputDirectory))
@@ -277,7 +228,6 @@ task Package `
 
 			Get-ChildItem -Path $publishedLibrariesDirectory -Filter "*.nupkg" -Recurse | Move-Item -Destination $librariesOutputDirectory
 		}
-	}
 }
 
 task Clean `
