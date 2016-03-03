@@ -3,13 +3,13 @@
   <metadata>
     <id>$id$</id>
     <version>$version$</version>
-    <title>Class Library</title>
+    <title>Google Maps API Wrapper .net</title>
     <authors>$author$</authors>
     <owners>$author$</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Google Maps API Client library</description>
+    <description>Class library for accessing Google Maps API via .net</description>
     <releaseNotes>[release notes]</releaseNotes>
     <copyright>$author$ Copyright 2016</copyright>
-    <tags>google, maps, google maps, .net, c#, api, web api</tags>
+    <tags></tags>
   </metadata>
 </package>

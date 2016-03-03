@@ -68,7 +68,7 @@
     <Compile Include="Response\ServiceStatus.cs" />
     <Compile Include="Response\PriceLevel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Contracts\IPlaceSerach.cs" />
+    <Compile Include="Contracts\IPlaceSearch.cs" />
     <Compile Include="Services\PlaceSearch.cs" />
   </ItemGroup>
   <ItemGroup>

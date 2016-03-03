@@ -1,14 +1,77 @@
-﻿namespace GoogleMaps.Net.Shared.Response
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="PlacesServiceStatus.cs" company="Sanu Sathyaseelan">
+//   The MIT License (MIT)
+//   
+//   Copyright (c) 2016 Sanu Sathyaseelan
+//   
+//   Permission is hereby granted, free of charge, to any person obtaining a copy
+//   of this software and associated documentation files (the "Software"), to deal
+//   in the Software without restriction, including without limitation the rights
+//   to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//   copies of the Software, and to permit persons to whom the Software is
+//   furnished to do so, subject to the following conditions:
+//   
+//   The above copyright notice and this permission notice shall be included in all
+//   copies or substantial portions of the Software.
+//   
+//   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//   AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+//   SOFTWARE.
+// </copyright>
+// <summary>
+//   The places service status.
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
+
+namespace GoogleMaps.Net.Shared.Response
 {
+    /// <summary>
+    /// The places service status.
+    /// </summary>
     public enum PlacesServiceStatus
     {
-        ERROR,
-        INVALID_REQUEST,
-        OK,
-        OVER_QUERY_LIMIT,
-        NOT_FOUND,
-        REQUEST_DENIED,
-        UNKNOWN_ERROR,
+        /// <summary>
+        /// The error.
+        /// </summary>
+        ERROR, 
+
+        /// <summary>
+        /// The invali d_ request.
+        /// </summary>
+        INVALID_REQUEST, 
+
+        /// <summary>
+        /// The ok.
+        /// </summary>
+        OK, 
+
+        /// <summary>
+        /// The ove r_ quer y_ limit.
+        /// </summary>
+        OVER_QUERY_LIMIT, 
+
+        /// <summary>
+        /// The no t_ found.
+        /// </summary>
+        NOT_FOUND, 
+
+        /// <summary>
+        /// The reques t_ denied.
+        /// </summary>
+        REQUEST_DENIED, 
+
+        /// <summary>
+        /// The unknow n_ error.
+        /// </summary>
+        UNKNOWN_ERROR, 
+
+        /// <summary>
+        /// The zer o_ results.
+        /// </summary>
         ZERO_RESULTS
     }
 }
